@@ -1,0 +1,626 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+  background-color: black;
+  color: white;
+}
+
+/* Fixed Header */
+/* Header */
+.fixed-header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: black;
+  color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures the header appears above other elements */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ccc;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.hamburger span {
+  background-color: white;
+  width: 25px;
+  height: 3px;
+  border-radius: 5px;
+}
+
+/* Initially hide the nav menu in mobile view */
+.nav-links {
+  display:block;
+}
+
+.nav-links.active {
+  display: block;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: black;
+  width: 100%;
+  padding: 20px 0;
+  gap: 20px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.nav-links.active ul{
+  display: block;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.login-btn,
+.signup-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-btn {
+  background-color: transparent;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.signup-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.signup-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  padding-top: 60px; /* Prevents the header from covering the hero section */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1),
+    rgba(255, 255, 255, 0) 50%
+  );
+  z-index: -1; /* Background stays behind other elements */
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%); /* Darkens the video */
+  z-index: -1; /* Video stays behind other elements */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Ensures the text is above the video */
+  color: #fff;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero-buttons button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  color: white;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.hero-buttons button:hover {
+  background-color: white;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 48px;
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Adjust the spacing between elements */
+  margin-top: 50px;
+}
+
+.container video{
+  width: 500px;
+  border-radius: 50%;
+ 
+}
+
+/* @keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.planet-info {
+  text-align: left;
+  width: 400px;
+}
+
+.btn {
+  background-color: white;
+  width: 200px;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* -------aboutus-------------------- */
+
+.about-us {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.about-us h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.about-us p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #ccc; /* Light gray for subtitle */
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  border-right: 1px solid #fff;
+  padding: 20px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column; /* Ensure elements stack vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: flex-start; /* Align items to the top */
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px; /* Add spacing below the heading */
+  /* color: #fff; */
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin-top: 0; /* Remove additional spacing above */
+  color: black;
+}
+
+.card:hover {
+  /* Apply hover effect styles */
+  transform: scale(1.1); /* Slightly enlarge the card */
+  background-color: #fff; /* Change background color */
+  color: black; /* Change text color */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+.learn {
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 20px;
+  width: 200px;
+  margin-right: 100px;
+}
+
+/* ------contactform-------------------------------- */
+
+/* Contact Section */
+.contact-container {
+  padding: 40px;
+  text-align: center;
+  margin-top: 300px;
+}
+
+.contact-container h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.contact-container p {
+  font-size: 18px;
+  color: #d1d1d1;
+  margin-bottom: 40px;
+}
+
+/* Main container for centering the card */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Card Container */
+.contact-card {
+  display: flex;
+  width: 800px;
+  max-width: 90%;
+  margin-bottom: 300px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Left Section: Form */
+.contact-card-left {
+  border-right: 1px solid white;
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ensures heading and form are stacked correctly */
+}
+
+.contact-card-left h2 {
+  font-size: 28px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.contact-card-left p {
+  font-size: 16px;
+  color: #d1d1d1;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  border: 1px solid white;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #777;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+/* Button */
+.send-button {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid white;
+  padding: 5px 10px;
+  width: 40%;
+  font-size: 10px;
+}
+
+.send-button:hover {
+  background-color: #e68900;
+}
+
+/* Right Section: Logo */
+.contact-card-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-card-right img {
+  animation: none;
+}
+
+.logo {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px; /* Optional for rounded logo look */
+}
+
+
+/* -----footer----- */
+
+.social{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.social-icon a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 10px;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: block;
+  }
+  
+  
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+  .about-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .hero-buttons button {
+    font-size: 14px;
+    padding: 8px 15px;
+    
+  }
+
+  /* ---planet----- */
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .container video {
+    width: 90%; /* Adjust to fit the screen width */
+    max-width: 300px;
+  }
+
+  .planet-info {
+    width: 90%; /* Adjust to fit the screen width */
+    text-align: center; /* Center text for better mobile readability */
+  }
+
+  .btn {
+    width: 80%; /* Make button adapt to screen width */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  /* About Section */
+  .about-us h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .about-us p {
+    font-size: 0.9rem;
+    color: black;
+  }
+
+  .about-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Change to 2 columns for smaller screens */
+    gap: 20px;
+  }
+
+  .card {
+    padding: 15px;
+    min-height: 150px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .card:hover {
+    /* Apply hover effect styles */
+    transform: scale(1.1); /* Slightly enlarge the card */
+    background-color: #fff; /* Change background color */
+    color: black; /* Change text color */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  }
+
+  .card h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+
+  .contact-container {
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .contact-container h2 {
+    font-size: 28px;
+  }
+
+  .contact-container p {
+    font-size: 16px;
+  }
+
+  .contact-card {
+    flex-direction: column; /* Stack the contact form and logo vertically */
+    margin-bottom: 50px;
+  }
+
+  .contact-card-left {
+    padding: 20px;
+  }
+
+  .contact-card-right {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .send-button {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .logo {
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+}

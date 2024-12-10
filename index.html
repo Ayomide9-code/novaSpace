@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Section with Fixed Header</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="assets/css/fontawesome.css" rel="stylesheet" />
+  <link href="assets/css/brands.css" rel="stylesheet" />
+  <link href="assets/css/solid.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Fixed Header -->
+  <header class="fixed-header">
+    <div class="logo">NovaSpace</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#planet">Planet</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+      <button class="login-btn">Log In</button>
+      <button class="signup-btn">Sign Up</button>
+    </div>
+  </header>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <video autoplay muted loop class="hero-video">
+      <source src="earth.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h1>Getting you closer to space</h1>
+      <p>Embark on a cosmic journey, discover mysteries, explore wonders, thrilling adventures!</p>
+      <div class="hero-buttons">
+        <button class="get-start-btn">Get Start</button>
+        <button class="see-more-btn">See More</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="planet" class="planet-section">
+    <h1>PLANET</h1>
+    <p>Planet or planetesimal is a celestial body orbiting a star or stellar remnant, possessing its own gravity, not
+      undergoing thermonuclear fusion, and clearing its orbital zone of planetesimals.</p>
+
+    <div class="container">
+      <!-- <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/1200px-The_Earth_seen_from_Apollo_17.jpg"
+        alt="Earth"> -->
+      <video src="video/earth-rotation.mp4" autoplay muted loop></video>
+      <div class="planet-info">
+        <h2>Earth</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto nesciunt voluptate consequatur voluptas,
+          rem totam expedita asperiores sed blanditiis vitae, excepturi, suscipit dicta magni! Quia omnis velit error
+          atque quos!.</p>
+        <ul>
+          <li>Mass: 5.972 x 10^24 kg</li>
+          <li>Radius: 6,371 km</li>
+          <li>Surface gravity: 9.8 m/s^2</li>
+        </ul>
+        <button class="btn">Learn More</button>
+      </div>
+    </div>
+  </section>
+  <!-- ------aboutus-------------------- -->
+  <section class="about-us" id="about">
+    <h1>About Us</h1>
+    <p>NovaSpace invites you to explore the mysteries of distant galaxies and celestial wonders, pushing the boundaries
+      of space exploration.</p>
+    <div class="about-cards">
+      <div class="card">
+        <h3>Travelling programmer</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quo. Inventore, earum, atque autem
+          quidem, quisquam aspernatur, aperiam quo explicabo voluptatibus consequuntur.
+        </p>
+        <button class="learn">Learn More</button>
+      </div>
+      <div class="card">
+        <h3>Modern technologies we use</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt magni,
+          odit unde similique veritatis neque laudantium, nihil quam numquam fugiat, quibusdam quidem a aut voluptates
+          eius tenetur laboriosam delectus? Recusandae!
+        </p>
+        <button class="learn">Learn More</button>
+      </div>
+      <div class="card">
+        <h3>Safety guarantee</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, molestias quod, voluptatibus
+          repudiandae
+          recusandae, beatae minus eveniet, placeat autem alias. Quas, repellendus.
+        </p>
+        <button class="learn">Learn More</button>
+      </div>
+      <div class="card">
+        <h3>Space Learning</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, earum, delectus, unde, expedita voluptatibus
+          necessitatibus minus accusantium libero voluptatum quia similique quae tempore quo nobis. Quo.
+        </p>
+        <button class="learn">Learn More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------contactform---------- -->
+  <!-- <div class="contact-container">
+    <div class="contact-left">
+      <h2>CONTACT</h2>
+      <p>
+        Do you have suggestions, questions, or just want to say hello to us? We greatly appreciate every message we receive from you.
+      </p>
+      <form class="contact-form" action="#" method="POST">
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="NAME" required />
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="EMAIL" required />
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" placeholder="MESSAGE" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="send-button">SEND MESSAGE</button>
+      </form>
+    </div>
+  
+    <div class="contact-right">
+      <div class="vertical-line"></div>
+      <img src="https://victor-velocity.github.io/Nova-Space/img/logos.png" alt="Logo" class="logo" />
+    </div>
+  </div> -->
+  <section class="contact-container" id="contact">
+    <h2>CONTACT</h2>
+    <p>
+      Do you have suggestions, questions, or just want to say hello to us? We greatly appreciate every message we
+      receive from you.
+    </p>
+
+    <div class="main-container">
+      <div class="contact-card">
+        <!-- Left Section: Form -->
+        <div class="contact-card-left">
+          <!-- Heading for the card -->
+
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="NAME" required />
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="EMAIL" required />
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="MESSAGE" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="send-button">SEND MESSAGE</button>
+          </form>
+        </div>
+
+        <!-- Right Section: Logo -->
+        <div class="contact-card-right">
+          <img src="assets/img/logos.png" alt="Logo" class="logo" />
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+  <!-- --footer-- -->
+
+  <footer class="social">
+    <div class="social-icon">
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></i></a>
+    </div>
+  </footer>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
